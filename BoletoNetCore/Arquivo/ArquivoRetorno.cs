@@ -170,6 +170,7 @@ namespace BoletoNetCore
             // Registro HEADER
             if (tipoRegistro == "0")
             {
+                NumeroSequencial = int.Parse(registro.Substring(110, 7));
                 b.LerHeaderRetornoCNAB400(registro);
                 return;
             }
