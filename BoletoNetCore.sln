@@ -9,9 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoletoNetCore.Testes", "Bol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoletoNetCore.Pdf", "BoletoNetCore.Pdf\BoletoNetCore.Pdf.csproj", "{17C2A467-051B-4DE4-BAAE-9D713EB8EFD6}"
 EndProject
+<<<<<<< Updated upstream
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoletoNetCore.QuestPdf", "BoletoNetCore.QuestPdf\BoletoNetCore.QuestPdf.csproj", "{CF92E047-9D27-434E-AD1E-8CB07EACCF42}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoletoNetCore.QuestPDF.AppTeste", "BoletoNetCore.QuestPDF.AppTeste\BoletoNetCore.QuestPDF.AppTeste.csproj", "{D5332CA6-4354-40C9-BDB3-337B4BDC7C9E}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "teste", "teste\teste.csproj", "{2ED10801-1356-4604-A812-223F82F5467B}"
+>>>>>>> Stashed changes
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,7 @@ Global
 		{17C2A467-051B-4DE4-BAAE-9D713EB8EFD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17C2A467-051B-4DE4-BAAE-9D713EB8EFD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17C2A467-051B-4DE4-BAAE-9D713EB8EFD6}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< Updated upstream
 		{CF92E047-9D27-434E-AD1E-8CB07EACCF42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CF92E047-9D27-434E-AD1E-8CB07EACCF42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF92E047-9D27-434E-AD1E-8CB07EACCF42}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +44,12 @@ Global
 		{D5332CA6-4354-40C9-BDB3-337B4BDC7C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5332CA6-4354-40C9-BDB3-337B4BDC7C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5332CA6-4354-40C9-BDB3-337B4BDC7C9E}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{2ED10801-1356-4604-A812-223F82F5467B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED10801-1356-4604-A812-223F82F5467B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED10801-1356-4604-A812-223F82F5467B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED10801-1356-4604-A812-223F82F5467B}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> Stashed changes
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
