@@ -20,6 +20,7 @@ namespace BoletoNetCore.Testes
                 Nome = "Beneficiario Teste",
                 Codigo = codigoBeneficiario,
                 CodigoDV = digitoCodigoBeneficiario,
+                CodigoTransmissao = codigoTransmissao,
                 Endereco = new Endereco
                 {
                     LogradouroEndereco = "Rua Teste do Beneficiário",
@@ -108,7 +109,7 @@ namespace BoletoNetCore.Testes
                 ValorJurosDia = (decimal)(100 * i * (0.2 / 100)),
                 AvisoDebitoAutomaticoContaCorrente = "2",
                 MensagemArquivoRemessa = "Mensagem para o arquivo remessa",
-                NumeroControleParticipante = "CHAVEPRIMARIA=" + _proximoNossoNumero
+                NumeroControleParticipante = "CHAVEPRIMARIA" + _proximoNossoNumero
             };
             // Mensagem - Instruções do Caixa
             StringBuilder msgCaixa = new StringBuilder();

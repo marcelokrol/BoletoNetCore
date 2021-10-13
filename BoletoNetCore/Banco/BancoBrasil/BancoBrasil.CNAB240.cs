@@ -322,11 +322,19 @@ namespace BoletoNetCore
                     case TipoCodigoProtesto.ProtestarDiasUteis:
                         reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0221, 001, 0, 2, '0');
                         break;
+                    case TipoCodigoProtesto.NegativacaoSemProtesto:
+                        reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0221, 001, 0, 8, '0');
+                        break;
                     default:
                         reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0221, 001, 0, 0, '0');
                         break;
                 }
                 reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0222, 002, 0, boleto.DiasProtesto, '0');
+
+                // conforme o manual Particularidades BB (pagina 10) disponível em https://www.bb.com.br/docs/pub/emp/empl/dwn/CbrVer04BB.pdf
+                // "Campo não tratado pelo sistema. Informar 'zeros'. O sistema considera a informação que foi cadastrada na sua carteira junto ao Banco do Brasil."
+                reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0224, 001, 0, 0, '0');
+                /*
                 switch (boleto.CodigoBaixaDevolucao)
                 {
                     case TipoCodigoBaixaDevolucao.NaoBaixarNaoDevolver:
@@ -339,6 +347,8 @@ namespace BoletoNetCore
                         reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0224, 001, 0, 0, '0');
                         break;
                 }
+                */
+
                 reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0225, 003, 0, boleto.DiasBaixaDevolucao, '0');
                 reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0228, 002, 0, "09", '0');
                 reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0230, 010, 2, "0", '0');
@@ -377,7 +387,11 @@ namespace BoletoNetCore
                 reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0154, 001, 0, boleto.Avalista.TipoCPFCNPJ("0"), '0');
                 reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0155, 015, 0, boleto.Avalista.CPFCNPJ, '0');
                 reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0170, 040, 0, boleto.Avalista.Nome, ' ');
-                reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0210, 003, 0, string.Empty, ' ');
+
+                // conforme manual disponivel em https://www.bb.com.br/docs/pub/emp/empl/dwn/CbrVer04BB.pdf
+                // "Campo não tratado. Preencher com 'zeros'."
+                reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0210, 003, 0, 0, '0');
+
                 reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0213, 020, 0, string.Empty, ' ');
                 reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0233, 008, 0, string.Empty, ' ');
                 reg.CodificarLinha();

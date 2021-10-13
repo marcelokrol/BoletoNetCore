@@ -23,6 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="BoletoImpressao\Parts\Pix.html" />
+    <None Remove="Imagens\085.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
   </ItemGroup>
 
